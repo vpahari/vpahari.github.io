@@ -10,13 +10,30 @@
     <link rel="stylesheet" href="./css/font-awesome.min.css">
     <link rel="stylesheet" href="./css/custom.min.css">
 
-	<style>
+	<!-- <style>
         #about img {
    		border-radius: 0 !important;
 	    width: 250px;      /* adjust as needed */
 	    height: auto;
 	}
-    </style>
+    </style> -->
+
+    <style>
+    #about img {
+        /* Set equal width and height for a perfect circle */
+        width: 250px;
+        height: 250px;
+        
+        /* Object-fit ensures the photo isn't stretched if it wasn't square */
+        object-fit: cover;
+        
+        /* This creates the circular shape */
+        border-radius: 50% !important;
+        
+        /* Optional: adds a subtle border to make it pop */
+        border: 2px solid #eee;
+    }
+</style>
 
 
 
@@ -55,7 +72,7 @@
 			<div class="units-row units-split wrap">
 				<div class="unit-45">
 					<center>
-						<img src="img/linkedin.jpg">
+						<img src="img/photo.jpeg">
 					</center>
 				</div>
 				<br>
