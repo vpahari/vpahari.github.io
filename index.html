@@ -17,21 +17,74 @@
 	    height: auto;
 	}
     </style> -->
-
-    <style>
+<!-- 
+<style>
+    /* Your existing circular image code */
     #about img {
-        /* Set equal width and height for a perfect circle */
         width: 250px;
         height: 250px;
-        
-        /* Object-fit ensures the photo isn't stretched if it wasn't square */
         object-fit: cover;
-        
-        /* This creates the circular shape */
         border-radius: 50% !important;
-        
-        /* Optional: adds a subtle border to make it pop */
-        border: 2px solid #eee;
+    }
+
+    /* New styles for blacker text */
+    body, p, li, h1, h2, h3, .intro p, .work-list li {
+        color: #000000 !important; /* Forces text to absolute black */
+    }
+
+    /* Optional: Makes links slightly darker too */
+    a {
+        color: #000000;
+        text-decoration: underline; /* Added for better visibility against black text */
+    }
+
+    /* Makes all links a standard blue color */
+    a {
+        color: #0000FF !important; /* Standard Blue */
+        text-decoration: none;     /* Optional: removes underline */
+    }
+
+    /* Changes color when you hover over the link */
+    a:hover {
+        color: #00008B !important; /* Dark Blue on hover */
+        text-decoration: underline; 
+    }
+</style>
+ -->
+
+<style>
+    /* 1. Circular Profile Image */
+    #about img {
+        width: 250px;
+        height: 250px;
+        object-fit: cover;
+        border-radius: 50% !important;
+    }
+
+    /* 2. Black Text */
+    body, p, li, h1, h2, h3 {
+        color: #000000 !important;
+    }
+
+    /* 3. Blue Links */
+    a {
+        color: #0000FF !important;
+        text-decoration: underline;
+    }
+
+    /* 4. Smaller Text for Paper and Talk Links */
+    /* This targets links specifically inside the publication list */
+    .work-list a b, 
+    .work-list a strong,
+    .work-list li a {
+        font-size: 14px !important; /* Adjust this number to make it even smaller */
+        font-weight: 600 !important;
+        text-transform: none;
+    }
+
+    /* Targets the 'TLDR Talk' paragraph specifically */
+    .work-list p a b {
+        font-size: 14px !important;
     }
 </style>
 
@@ -101,54 +154,52 @@
 			<ul class="work-list">
 				<li></li>
 				<li><b>Becoming Immutable: How Ethereum is Made</b></li>
-				<li>Vabuk Pahari and Andrea Canidio</li>
+				<li><strong>Vabuk Pahari</strong> and Andrea Canidio</li>
+				<li><a href="https://arxiv.org/abs/2506.04940" target="_blank"><b>Paper</b></a></li> 
 				<li>Non-archival: CBER Crafting the Cryptoeconomy Conference, Columbia University, New York, USA, October 2025</li>
-				<p><a href="https://arxiv.org/abs/2506.04940" target="_blank"><b>ArXiv</b></a>.</p> 
 			</ul>
 			<ul class="work-list">
 				<li></li>
 				<li><b>How Exclusive are Ethereum Transactions? Evidence from non-winning blocks</b></li>
-				<li>Vabuk Pahari and Andrea Canidio</li>
+				<li><strong>Vabuk Pahari</strong> and Andrea Canidio</li>
+				<li><a href="https://arxiv.org/abs/2509.16052" target="_blank"><b>Paper</b></a></li>
+				<li>Accepted at The 5th International Workshop on Cryptoasset Analytics (CAAW 2026)</li>
 				<li>Non-archival: Futures of Money II, Paris, May 2025</li>
-				<p><a href="https://arxiv.org/abs/2509.16052" target="_blank"><b>ArXiv</b></a>.</p>
 			</ul>
 			<ul class="work-list">
 				<li></li>
 				<li><b>On the Governance of Decentralized Autonomous Organizations </b></li>
-				<li>Vabuk Pahari, Balakrishnan Chandrasekaran, Abhisek Dash, Krishna P. Gummadi, and  Johnnatan Messias</li>
-				<p><a href="https://www.youtube.com/watch?v=K8XcGork4qg" target="_blank"><b>TLDR Talk</b></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.youtube.com/watch?v=O2gmVNjWIko" target="_blank"><b>ETHCC Talk</b></a>.</p>
+				<li><strong>Vabuk Pahari</strong>, Balakrishnan Chandrasekaran, Abhisek Dash, Krishna P. Gummadi, and  Johnnatan Messias</li>
+				<li>
+				    <a href="https://www.youtube.com/watch?v=K8XcGork4qg" target="_blank"><b>TLDR Talk</b></a> &nbsp;&bull;&nbsp; 
+				    <a href="https://www.youtube.com/watch?v=O2gmVNjWIko" target="_blank"><b>ETHCC Talk</b></a>
+				</li>
 			</ul>
 			<ul class="work-list">
 				<li></li>
 				<li><b>Non-Atomic Arbitrage in Decentralized Finance</b></li>
-				<li>Lioba Heimbach, Vabuk Pahari, Eric Schertenleib</li>
-				<li>IEEE Symposium on Security and Privacy (S&P) 2024</li>
-				<p><a href="https://arxiv.org/pdf/2401.01622.pdf" target="_blank"><b>ArXiv</b></a>.</p>
+				<li>Lioba Heimbach, <strong>Vabuk Pahari</strong>, Eric Schertenleib</li>
+				<li><a href="https://arxiv.org/pdf/2401.01622.pdf" target="_blank">Paper</a></li>
+				<li>IEEE Symposium on Security and Privacy (S&P 2024)</li>
 			</ul>
 			<ul class="work-list">
 				<li></li>
 				<li><b>Dissecting Bitcoin and Ethereum Transactions: On the Lack of Transaction Contention and Prioritization Transparency in Blockchains</b></li>
-				<li>Johnnatan Messias, Vabuk Pahari, Balakrishnan Chandrasekaran, Krishna P. Gummadi, and Patrick Loiseau.</li>
-				<li>In Proceedings of the Financial Cryptography and Data Security (FC 2023). Bol, Brač, Croatia. May, 2023.
-				Accepted at Financial Cryptography (FC'23)</li>
-				<p><a href="https://arxiv.org/pdf/2302.06962.pdf" target="_blank"><b>ArXiv</b></a>.</p>
+				<li>Johnnatan Messias, <strong>Vabuk Pahari</strong>, Balakrishnan Chandrasekaran, Krishna P. Gummadi, and Patrick Loiseau.</li>
+				<li><a href="https://arxiv.org/pdf/2302.06962.pdf" target="_blank">Paper</a></li>
+				<li>In Proceedings of the Financial Cryptography and Data Security (FC 2023)</li>
 			</ul>
 			<ul class="work-list">
 				<li></li>
 				<li><b>Understanding Blockchain Governance: Analyzing Decentralized Voting to Amend DeFi Smart Contracts</b></li>
-				<li>Johnnatan Messias, Vabuk Pahari, Balakrishnan Chandrasekaran, Krishna P. Gummadi, and Patrick Loiseau.</li>
-				<li>Pre print</li>
-				<p><a href="https://arxiv.org/pdf/2305.17655.pdf" target="_blank"><b>ArXiv</b></a>.</p>
+				<li>Johnnatan Messias, <strong>Vabuk Pahari</strong>, Balakrishnan Chandrasekaran, Krishna P. Gummadi, and Patrick Loiseau.</li>
+				<li><a href="https://arxiv.org/pdf/2305.17655.pdf" target="_blank">Paper</a></li>
 			</ul>
 			<ul class="work-list">
 				<li></li>
 				<li><b>The Case for Non-Contingent Transaction Fees in Blockchains</b></li>
-				<li>In progress</li>
-			</ul>
-			<ul class="work-list">
-				<li></li>
-				<li><b>On Transaction Ordering in Blockchains: The Case for Weighted Fair Queuing</b></li>
-				<li>Under Preparation</li>
+				<li><strong>Vabuk Pahari</strong>, Johnnatan Messias, Balakrishnan Chandrasekaran, Krishna P. Gummadi, and Patrick Loiseau.</li>
+				<li>Under Submission at IEEE International Conference on Blockchain and Cryptocurrency (ICBC 2026).</li>
 			</ul>
 		</div>
 	</div>
